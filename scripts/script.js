@@ -1,3 +1,4 @@
+// input number limiter 
 document.querySelector('form').addEventListener('submit', function (e) {
     const mobile = document.getElementById('mobile').value;
     const pin = document.getElementById('pin').value;
@@ -12,3 +13,4 @@ document.querySelector('form').addEventListener('submit', function (e) {
         return;
     }
 });
+
