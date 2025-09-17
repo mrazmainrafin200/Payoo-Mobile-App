@@ -30,12 +30,17 @@
         <div>
             <label class="text-lg font-bold text-[#080808ff]" for="">Mobile Number</label>
             <br>
-            <input type="number" placeholder="Enter your number" class="input mt-3 w-full text-[#080808ff] rounded-3xl bg-[#f4f5f7]" />
+            <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="[0-9]{10,11}" minlength="10"
+                maxlength="11" placeholder="Enter your number"
+                class="input mt-3 w-full text-[#080808ff] rounded-3xl bg-[#f4f5f7]"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,11)" required />
         </div>
         <div class="mt-4">
             <label class="text-lg font-bold text-[#080808ff]" for="">4 Digit Pin</label>
             <br>
-            <input type="number" placeholder="Enter 4 Digit Pin" class="input mt-3 w-full text-[#080808ff] rounded-3xl bg-[#f4f5f7]" />
+            <input id="pin" name="pin" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4"
+                placeholder="Enter 4 Digit Pin" class="input mt-3 w-full text-[#080808ff] rounded-3xl bg-[#f4f5f7]"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,4)" required />
         </div>
         <button class="btn !bg-[#0874f2ff] border-none mt-4 w-full rounded-3xl text-[#ffffffff]">Login</button>
     </form>
